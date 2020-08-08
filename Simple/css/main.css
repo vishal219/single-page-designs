@@ -57,19 +57,21 @@ body,html{
     background-image: url(../images/logoo.jpg);
     background-size: cover;
     height: 600px;
+   
 }
 .banner-content{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    opacity: 8;
 }
 .banner-content p{
     color: white;
     font-size: 40px;
     padding: 15px 0px 15px 0px;
 }
-.banner-content a{
+.banner-content a:not(.logo){
     font-size: 20px;
     text-decoration: none;
     color: white;
@@ -79,7 +81,7 @@ body,html{
     padding: 15px 20px 15px 20px;
     margin: 20px 0px 20px 0px;
 }
-.banner-content a:hover{
+.banner-content a:hover:not(.logo){
     background-color: black;
     color: white;
 }
@@ -120,4 +122,79 @@ i{
     padding: 40px 0px 20px 0px;
     width: 35%; 
     text-align: justify;
+}
+.middle{
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    background-image: url(../images/photo.jpg);
+    display: flex;
+    background-size: cover;
+   height: 600px;
+}
+.middle .container{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-end;
+}
+.tag-lines{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+}
+.tag-lines p{
+    padding: 5px 0px 5px 0px;
+}
+.contact{
+    background-color: #023433;
+    color: white;
+}
+.contact .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 0px 30px 0px;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.contact-head{
+   display: flex;
+   justify-content: flex-start;
+   width: 70%;
+}
+.underlined{
+    font-size: 30px;
+    padding: 15px 0px 15px 0px;
+    border-bottom: white solid 2px;
+    width: 40%;
+}
+.empty{
+    width: 60%;
+    border-bottom: 1px solid grey;
+}
+input{
+   margin: 10px 0px 10px 0px;
+   padding: 10px 40px 10px 10px;
+   background-color: #274648;
+   color: grey;
+}
+.contact-form a{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    background-color:transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 15px 20px 15px 20px;
+    margin: 20px 0px 20px 0px;
+}
+.contact-form a:hover{
+    background-color: black;
+    color: white;
 }
