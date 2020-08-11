@@ -8,14 +8,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <div class="app-wrapper">       
+    <div class="app-wrapper">     
+        <div class="modal" id="id01">
+            <div class="modal-content">
+                
+                <div class="imgcontainer">
+                    <h2>Register</h2>
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                   <input type="file" alt="Upload Picture" placeholder="Upload Picture">
+                </div>
+                <div class="container">
+                    <div class="contact-form">
+                        <input type="text" placeholder="First name">
+                        <input type="text" placeholder="Last name">
+                        <input type="email" placeholder="Email">
+                        <a href="#">Submit</a>
+                    </div>
+                </div>
+            </div>
+        </div>  
         <div class="banner">
             <div class="banner-content">
                 <p>
                     Arriving Late July
                 </p>
                 <a href="#" class="logo"><img src="./images/log.png"></a>
-                <a href="#">
+                <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
                     
                     Be The First To Join
                     
@@ -51,10 +69,10 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <input type="text" placeholder="First name">
-                    <input type="text" placeholder="Last name">
-                    <input type="email" placeholder="Email">
-                    <a href="#">Submit</a>
+                    <input id="inp1" type="text" placeholder="First name">
+                    <input id="inp2" type="text" placeholder="Last name">
+                    <input id="inp3" type="email" placeholder="Email">
+                    <a href="#" onclick="fun()">Submit</a>
                 </div>
             </div>
         </div>
@@ -144,4 +162,23 @@
         </div>
     </div>
 </body>
+<script>
+    function fun()
+    {
+       
+      if(document.getElementById('inp1').value=="" || document.getElementById('inp2').value=="" || document.getElementById('inp3').value=="")
+      alert("Please fill the entire form")
+      else
+      alert("Thanks for reaching out. We will get back to you via email. Stay tuned.")
+    }
+    // Get the modal
+    var modal = document.getElementById('id01');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
 </html>
